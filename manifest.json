@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Youtube Slice",
+    "version": "1.0",
+    "description": "Generate QR codes from page links.",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "images/image.png"
+      }
+    },
+    "background": {
+      "service_worker": "content.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
